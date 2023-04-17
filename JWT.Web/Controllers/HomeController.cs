@@ -8,11 +8,13 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly HttpClient _client;
+    private readonly IHttpClientFactory _clientFactory;
 
-    public HomeController(ILogger<HomeController> logger, HttpClient client)
+    public HomeController(ILogger<HomeController> logger, IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
-        _client = client;
+        _clientFactory = httpClientFactory;
+        _client = _clientFactory.CreateClient("requestHandler");
     }
 
     public async Task<IActionResult> Index()
