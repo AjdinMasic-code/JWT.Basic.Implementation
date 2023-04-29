@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{D42613FD-2676-404B-AB6C-102691364D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT.Web", "JWT.Web\JWT.Web.csproj", "{D0D83E27-8317-4712-AF07-3D1D49C51CF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D42613FD-2676-404B-AB6C-102691364D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D42613FD-2676-404B-AB6C-102691364D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D42613FD-2676-404B-AB6C-102691364D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D83E27-8317-4712-AF07-3D1D49C51CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D83E27-8317-4712-AF07-3D1D49C51CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D83E27-8317-4712-AF07-3D1D49C51CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D83E27-8317-4712-AF07-3D1D49C51CF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

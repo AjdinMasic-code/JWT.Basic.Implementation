@@ -63,19 +63,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    // Add Swagger middleware
-    app.UseSwagger();
+//This isn't a go live product. Otherwise.... Hide this behind an env.IsDevelopment check...
+// Add Swagger middleware
+app.UseSwagger();
 
-    // Add Swagger UI middleware
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-        c.RoutePrefix = "swagger";
-    });
-}
+// Add Swagger UI middleware
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+    c.RoutePrefix = "swagger";
+});
 
 app.UseHttpsRedirection();
 
