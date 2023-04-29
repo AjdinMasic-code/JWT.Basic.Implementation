@@ -5,10 +5,10 @@ services:
   frontend:
     image: frontend
     build:
-      context: jwt.web
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./jwt.web/Dockerfile
     environment: 
-      - backendUrl=http://backend
+      - BaseUrl=http://backend
     ports:
       - "5902:80"
     depends_on: 
@@ -16,8 +16,8 @@ services:
   backend:
     image: backend
     build: 
-      context: api
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./API/Dockerfile
     ports: 
       - "5900:80"
-    
+    command: ["dotnet", "API.dll"]

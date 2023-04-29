@@ -1,13 +1,13 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 7344
-EXPOSE 4544
+EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["API/API.csproj", "API/"]
+COPY ["./API/API.csproj", "API/"]
 COPY ["Contracts/Contracts.csproj", "Contracts/"]
-RUN dotnet restore "API/API.csproj"
+RUN dotnet restore "./API/API.csproj"
 COPY . .
 WORKDIR "/src/API"
 RUN dotnet build "API.csproj" -c Release -o /app/build

@@ -5,7 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["JWT.Web/JWT.Web.csproj", "JWT.Web/"]
+COPY ["./JWT.Web/JWT.Web.csproj", "JWT.Web/"]
+COPY ["Contracts/Contracts.csproj", "Contracts/"]
 RUN dotnet restore "JWT.Web/JWT.Web.csproj"
 COPY . .
 WORKDIR "/src/JWT.Web"

@@ -14,11 +14,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Contracts\Contracts.csproj" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <ProjectReference Include="..\Contracts\Contracts.csproj" />
     </ItemGroup>
 
 </Project>

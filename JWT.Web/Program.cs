@@ -20,7 +20,6 @@ builder.Services.AddHttpClient("requestHandler",(serviceProvider, httpClient) =>
     httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 });
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
