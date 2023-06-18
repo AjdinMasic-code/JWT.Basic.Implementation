@@ -3,7 +3,7 @@ If you are using Rider or Visual Studio you will need to run the JWT.Authenticat
 
 The application tests a failure path (not authorized) and a success path generating a token and sending a request to protected endpoint.
 
-Additionally if you want to get a quick run and have Docker installed. You can move into the root directory of this file via a terminal and run the following commands:
+Additionally if you want to get a quick run and have Docker installed. You can move into the root directory via a terminal and run the following commands:
 
 docker-compose build
 
